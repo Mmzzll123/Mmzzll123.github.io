@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>马振霖 · 班级心理委员 | 心晴手册</title>
+<meta name="author" content="马振霖">
+<meta name="description" content="马振霖，班级心理委员。心晴手册：情绪记录、呼吸放松、心理科普与求助资源，一个可以慢慢看的地方。">
+<meta property="og:title" content="心晴手册 · 马振霖（班级心理委员）">
+<meta property="og:description" content="不负责给答案，负责陪你找到自己的答案。情绪工具、心理科普与求助资源。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f4f4a'/%3E%3Cpath d='M16 24c-4-3-7-5.6-7-9a3.9 3.9 0 017-2.4A3.9 3.9 0 0123 15c0 3.4-3 6-7 9z' fill='%23fbf8f3'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#fbf8f3;
+    --bg-soft:#f4eee4;
+    --ink:#1c2a27;
+    --ink-2:#5c6b66;
+    --ink-3:#8a9994;
+    --green:#2f4f4a;
+    --green-2:#3d635c;
+    --mint:#8fb3ab;
+    --clay:#d3865c;
+    --clay-soft:#f2ddcc;
+    --line:rgba(28,42,39,.13);
+    --line-soft:rgba(28,42,39,.07);
+    --card:rgba(255,255,255,.78);
+    --card-solid:#fffdf9;
+    --shadow:0 16px 44px rgba(47,79,74,.10);
+    --shadow-sm:0 4px 16px rgba(47,79,74,.07);
+    --radius:18px;
+    --nav-bg:rgba(251,248,243,.86);
+    --serif:"Source Han Serif SC","Noto Serif SC","Songti SC","SimSun",Georgia,serif;
+    --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  html[data-theme="dark"]{
+    --bg:#111917;
+    --bg-soft:#16211e;
+    --ink:#e8f0ec;
+    --ink-2:#a3b3ad;
+    --ink-3:#76867f;
+    --green:#9cc0b7;
+    --green-2:#7fa89f;
+    --mint:#5d837b;
+    --clay:#e29b74;
+    --clay-soft:rgba(226,155,116,.16);
+    --line:rgba(232,240,236,.15);
+    --line-soft:rgba(232,240,236,.08);
+    --card:rgba(255,255,255,.045);
+    --card-solid:#18221f;
+    --shadow:0 16px 44px rgba(0,0,0,.32);
+    --shadow-sm:0 4px 16px rgba(0,0,0,.22);
+    --nav-bg:rgba(17,25,23,.86);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    color:var(--ink);
+    background-color:var(--bg);
+    background-image:
+      radial-gradient(900px 520px at 82% -8%, rgba(143,179,171,.22), transparent 62%),
+      radial-gradient(760px 480px at 6% 12%, rgba(211,134,92,.13), transparent 60%),
+      radial-gradient(700px 500px at 50% 108%, rgba(47,79,74,.10), transparent 62%);
+    background-attachment:fixed;
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  img,svg{max-width:100%}
+  a{color:inherit}
+
+  /* ================= 导航 ================= */
+  .nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:12px clamp(16px,4vw,32px);
+    background:var(--nav-bg);
+    backdrop-filter:blur(14px) saturate(1.2);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    text-decoration:none;
+    font-family:var(--serif);
+    font-size:1.02rem;
+    letter-spacing:.14em;
+    white-space:nowrap;
+  }
+  .brand .dot{
+    width:9px;height:9px;border-radius:50%;
+    background:var(--clay);
+    box-shadow:0 0 0 4px rgba(211,134,92,.18);
+  }
+  .nav-links{
+    display:flex;
+    gap:clamp(10px,2vw,26px);
+    margin-left:auto;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{
+    position:relative;
+    padding:4px 2px;
+    text-decoration:none;
+    font-size:.9rem;
+    letter-spacing:.08em;
+    color:var(--ink-2);
+    white-space:nowrap;
+    transition:color .2s;
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;right:100%;bottom:0;
+    height:1.5px;
+    background:var(--clay);
+    transition:right .28s ease;
+  }
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a.active{color:var(--ink)}
+  .nav-links a.active::after,
+  .nav-links a:hover::after{right:0}
+  .theme-btn{
+    flex:0 0 auto;
+    width:36px;height:36px;
+    display:grid;place-items:center;
+    border:1px solid var(--line);
+    border-radius:50%;
+    background:transparent;
+    color:var(--ink-2);
+    cursor:pointer;
+    transition:transform .25s, color .2s, border-color .2s;
+  }
+  .theme-btn:hover{transform:rotate(-18deg);color:var(--clay);border-color:var(--clay)}
+  .theme-btn svg{width:17px;height:17px}
+
+  /* ================= 容器 ================= */
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,5vw,40px)}
+  .sec{padding:clamp(48px,7vw,84px) 0;border-top:1px solid var(--line-soft)}
+  .sec:first-of-type{border-top:0}
+
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:clamp(24px,4vw,40px);
+    flex-wrap:wrap;
+  }
+  .sec-head .num{
+    font-family:var(--mono);
+    font-size:.76rem;
+    letter-spacing:.2em;
+    color:var(--clay);
+    padding-bottom:3px;
+  }
+  .sec-head h2{
+    margin:0;
+    font-family:var(--serif);
+    font-size:clamp(1.35rem,3.2vw,1.72rem);
+    font-weight:600;
+    letter-spacing:.14em;
+  }
+  .sec-head .en{
+    font-family:Georgia,serif;
+    font-size:.72rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+  }
+  .sec-head .rule{
+    flex:1 1 60px;
+    height:1px;
+    min-width:40px;
+    background:linear-gradient(90deg, var(--line), transparent);
+  }
+
+  /* ================= 首屏 ================= */
+  .hero{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    align-items:center;
+    gap:clamp(24px,5vw,56px);
+    padding:clamp(40px,7vw,80px) 0 clamp(44px,7vw,76px);
+  }
+  .kicker{
+    margin:0 0 14px;
+    font-family:var(--mono);
+    font-size:.74rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--clay);
+  }
+  .hero h1{
+    margin:0 0 4px;
+    font-family:var(--serif);
+    font-size:clamp(2.4rem,6.4vw,3.6rem);
+    font-weight:600;
+    letter-spacing:.06em;
+    line-height:1.15;
+  }
+  .h1-sub{
+    display:block;
+    margin-top:8px;
+    font-family:Georgia,serif;
+    font-size:clamp(.82rem,2vw,.98rem);
+    font-weight:400;
+    font-style:italic;
+    letter-spacing:.16em;
+    color:var(--ink-3);
+  }
+  .lead{
+    margin:22px 0 0;
+    font-size:clamp(1rem,2.3vw,1.12rem);
+    line-height:1.95;
+    color:var(--ink);
+  }
+  .lead-en{
+    margin:10px 0 0;
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:.92rem;
+    color:var(--ink-2);
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:.72em 1.5em;
+    border-radius:999px;
+    font-size:.92rem;
+    letter-spacing:.06em;
+    text-decoration:none;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform .22s, box-shadow .22s, background .22s, color .22s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--green);color:#fbf8f3;box-shadow:0 10px 24px rgba(47,79,74,.24)}
+  html[data-theme="dark"] .btn-primary{color:#0e1614}
+  .btn-primary:hover{box-shadow:0 14px 30px rgba(47,79,74,.3)}
+  .btn-ghost{border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--clay);color:var(--clay)}
+
+  .hero-meta{
+    display:flex;
+    gap:8px 22px;
+    flex-wrap:wrap;
+    margin:28px 0 0;
+    padding:0;
+    list-style:none;
+    font-size:.82rem;
+    color:var(--ink-3);
+    letter-spacing:.06em;
+  }
+  .hero-meta li{display:flex;align-items:center;gap:8px}
+  .hero-meta li::before{
+    content:"";
+    width:5px;height:5px;
+    border-radius:50%;
+    background:var(--mint);
+  }
+
+  .hero-visual{
+    position:relative;
+    aspect-ratio:1;
+    display:grid;
+    place-items:center;
+  }
+  .ring{
+    position:absolute;
+    border-radius:50%;
+    border:1px solid var(--line);
+    animation:breathe 9s ease-in-out infinite;
+  }
+  .ring-1{width:52%;height:52%;background:radial-gradient(circle at 34% 30%, rgba(143,179,171,.34), rgba(47,79,74,.10));border-color:transparent}
+  .ring-2{width:74%;height:74%;animation-delay:.5s}
+  .ring-3{width:97%;height:97%;animation-delay:1s;border-style:dashed}
+  @keyframes breathe{
+    0%,100%{transform:scale(.96)}
+    45%{transform:scale(1.035)}
+  }
+  .core{
+    position:relative;
+    z-index:2;
+    font-family:var(--serif);
+    font-size:1.28rem;
+    letter-spacing:.34em;
+    text-indent:.34em;
+    color:var(--green);
+  }
+  html[data-theme="dark"] .core{color:var(--ink)}
+  .float-tag{
+    position:absolute;
+    z-index:3;
+    padding:.28em .9em;
+    font-size:.76rem;
+    letter-spacing:.12em;
+    color:var(--ink-2);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:999px;
+    backdrop-filter:blur(6px);
+    box-shadow:var(--shadow-sm);
+    animation:drift 7s ease-in-out infinite;
+  }
+  .t1{top:6%;left:2%}
+  .t2{right:0;top:38%;animation-delay:1.2s}
+  .t3{bottom:9%;left:14%;animation-delay:2.4s}
+  @keyframes drift{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-9px)}
+  }
+
+  /* ================= 通用卡片 ================= */
+  .card{
+    padding:clamp(20px,3vw,28px);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+  }
+  .card h3{
+    margin:0 0 10px;
+    font-family:var(--serif);
+    font-size:1.02rem;
+    font-weight:600;
+    letter-spacing:.1em;
+  }
+  .card p{margin:0;font-size:.94rem;color:var(--ink-2);line-height:1.9}
+  .card p + p{margin-top:10px}
+
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2.2vw,20px)}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.2vw,20px)}
+  .grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2.2vw,20px)}
+
+  .quote-block{
+    margin-top:clamp(18px,3vw,26px);
+    padding:clamp(24px,4vw,38px);
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+    background:
+      linear-gradient(135deg, rgba(143,179,171,.14), transparent 55%),
+      var(--card);
+    position:relative;
+    overflow:hidden;
+  }
+  .quote-block::before{
+    content:"”";
+    position:absolute;
+    right:18px;
+    top:-24px;
+    font-family:Georgia,serif;
+    font-size:8rem;
+    line-height:1;
+    color:var(--clay);
+    opacity:.16;
+  }
+  .quote-block blockquote{
+    margin:0;
+    font-family:var(--serif);
+    font-size:clamp(1.02rem,2.6vw,1.24rem);
+    letter-spacing:.06em;
+    line-height:1.95;
+  }
+  .quote-block cite{
+    display:block;
+    margin-top:14px;
+    font-style:normal;
+    font-size:.82rem;
+    letter-spacing:.14em;
+    color:var(--ink-3);
+  }
+
+  /* ================= 职责卡 ================= */
+  .duty{
+    position:relative;
+    padding-left:64px;
+  }
+  .duty .idx{
+    position:absolute;
+    left:clamp(18px,3vw,26px);
+    top:clamp(20px,3vw,26px);
+    font-family:var(--mono);
+    font-size:.74rem;
+    letter-spacing:.1em;
+    color:var(--clay);
+    padding:2px 7px;
+    border:1px solid var(--clay-soft);
+    border-radius:5px;
+  }
+  html[data-theme="dark"] .duty .idx{border-color:rgba(226,155,116,.32)}
+
+  /* ================= 工具区 ================= */
+  .tools{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,22px)}
+  .tool{display:flex;flex-direction:column}
+  .tool-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:6px;
+  }
+  .tool-head h3{margin:0}
+  .tool-head .hint{font-size:.74rem;letter-spacing:.1em;color:var(--ink-3)}
+  .tool-note{
+    margin-top:auto;
+    padding-top:14px;
+    font-size:.78rem;
+    color:var(--ink-3);
+    line-height:1.7;
+  }
+
+  /* 情绪天气 */
+  .moods{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+    margin:16px 0 14px;
+  }
+  .mood{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:7px;
+    padding:10px 4px 9px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:transparent;
+    color:var(--ink-2);
+    font-size:.75rem;
+    letter-spacing:.08em;
+    cursor:pointer;
+    transition:border-color .2s, background .2s, transform .18s, color .2s;
+  }
+  .mood svg{width:26px;height:26px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .mood:hover{transform:translateY(-2px);border-color:var(--mint)}
+  .mood[aria-pressed="true"]{
+    border-color:var(--green);
+    background:rgba(143,179,171,.22);
+    color:var(--ink);
+  }
+  .mood-row{display:flex;gap:8px;align-items:center}
+  .mood-row input{
+    flex:1;
+    min-width:0;
+    padding:.55em .8em;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:var(--card-solid);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:.86rem;
+  }
+  .mood-row input::placeholder{color:var(--ink-3)}
+  .mood-row input:focus{outline:none;border-color:var(--mint)}
+  .mini-btn{
+    flex:0 0 auto;
+    padding:.55em 1.05em;
+    border:1px solid var(--green);
+    border-radius:10px;
+    background:var(--green);
+    color:#fbf8f3;
+    font-size:.84rem;
+    letter-spacing:.06em;
+    cursor:pointer;
+    transition:opacity .2s, transform .18s;
+  }
+  html[data-theme="dark"] .mini-btn{color:#0e1614}
+  .mini-btn:hover{transform:translateY(-1px);opacity:.92}
+  .mini-btn.ghost{background:transparent;color:var(--ink-2);border-color:var(--line)}
+  .mini-btn.ghost:hover{color:var(--clay);border-color:var(--clay)}
+
+  .timeline{
+    list-style:none;
+    margin:16px 0 0;
+    padding:0;
+    display:grid;
+    gap:8px;
+    max-height:186px;
+    overflow-y:auto;
+  }
+  .timeline li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:7px 10px;
+    border-radius:9px;
+    background:var(--bg-soft);
+    font-size:.84rem;
+    color:var(--ink-2);
+  }
+  .timeline .t-time{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);white-space:nowrap}
+  .timeline .t-name{color:var(--ink);letter-spacing:.06em;min-width:2.6em}
+  .timeline .t-note{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .empty{font-size:.84rem;color:var(--ink-3);margin:14px 0 0}
+
+  .bars{display:grid;gap:7px;margin-top:16px}
+  .bar-row{display:grid;grid-template-columns:3.4em 1fr 2.2em;align-items:center;gap:9px;font-size:.78rem;color:var(--ink-3)}
+  .bar-track{height:6px;border-radius:999px;background:var(--bg-soft);overflow:hidden}
+  .bar-fill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--mint),var(--green));transition:width .5s ease}
+
+  /* 呼吸练习 */
+  .breath-stage{
+    position:relative;
+    display:grid;
+    place-items:center;
+    height:186px;
+    margin:10px 0 6px;
+  }
+  .breath-circle{
+    width:104px;height:104px;
+    border-radius:50%;
+    background:radial-gradient(circle at 34% 30%, rgba(143,179,171,.55), rgba(47,79,74,.42));
+    display:grid;
+    place-items:center;
+    color:#fbf8f3;
+    font-family:var(--serif);
+    font-size:1.02rem;
+    letter-spacing:.14em;
+    transition:transform 4s cubic-bezier(.4,0,.4,1), box-shadow .8s;
+    box-shadow:0 0 0 0 rgba(143,179,171,.4);
+  }
+  .breath-circle .cnt{font-family:var(--mono);font-size:.78rem;letter-spacing:0;opacity:.85;display:block;text-align:center;margin-top:2px}
+  .breath-halo{
+    position:absolute;
+    width:104px;height:104px;
+    border-radius:50%;
+    border:1px dashed var(--line);
+    transition:transform 4s cubic-bezier(.4,0,.4,1);
+  }
+  .breath-ctrl{display:flex;gap:8px;justify-content:center;margin-top:6px}
+
+  /* 自查量表 */
+  .quiz{display:grid;gap:12px;margin-top:6px}
+  .q{padding:12px 14px;border:1px solid var(--line-soft);border-radius:12px;background:var(--card-solid)}
+  .q-t{font-size:.9rem;line-height:1.7;margin-bottom:8px}
+  .q-t span{font-family:var(--mono);font-size:.74rem;color:var(--clay);margin-right:7px}
+  .opts{display:flex;gap:6px;flex-wrap:wrap}
+  .opt{
+    padding:.3em .74em;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:transparent;
+    color:var(--ink-2);
+    font-size:.78rem;
+    cursor:pointer;
+    transition:all .18s;
+  }
+  .opt:hover{border-color:var(--mint)}
+  .opt[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fbf8f3}
+  html[data-theme="dark"] .opt[aria-pressed="true"]{color:#0e1614}
+  .quiz-result{
+    margin-top:14px;
+    padding:14px 16px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:
+      linear-gradient(135deg, rgba(211,134,92,.10), transparent 60%),
+      var(--bg-soft);
+    font-size:.88rem;
+    line-height:1.85;
+    display:none;
+  }
+  .quiz-result.show{display:block}
+  .quiz-result strong{font-family:var(--serif);font-size:.98rem;letter-spacing:.08em}
+
+  /* ================= 误解 / 事实 ================= */
+  .myth{
+    display:grid;
+    gap:14px;
+  }
+  .myth-item{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    background:var(--card);
+  }
+  .myth-item > div{padding:16px 18px}
+  .myth-item .m{background:rgba(211,134,92,.07);border-right:1px solid var(--line)}
+  .myth-item .tag{
+    display:block;
+    font-family:var(--mono);
+    font-size:.68rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .myth-item .m .tag{color:var(--clay)}
+  .myth-item .f .tag{color:var(--mint)}
+  .myth-item p{margin:0;font-size:.9rem;line-height:1.85;color:var(--ink-2)}
+  .myth-item .m p{text-decoration:line-through;text-decoration-color:rgba(211,134,92,.45);text-decoration-thickness:1px}
+
+  /* ================= 效应卡 ================= */
+  .effect{
+    position:relative;
+    overflow:hidden;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .effect:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .effect .no{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.16em;
+    color:var(--ink-3);
+  }
+  .effect h3{margin:6px 0 8px;font-size:1rem}
+  .effect .memo{
+    margin-top:12px;
+    padding-top:11px;
+    border-top:1px dashed var(--line);
+    font-size:.82rem;
+    color:var(--clay);
+    line-height:1.75;
+  }
+
+  /* ================= 求助 ================= */
+  .alert{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    padding:20px 22px;
+    border-radius:var(--radius);
+    border:1px solid rgba(211,134,92,.42);
+    background:
+      linear-gradient(135deg, rgba(211,134,92,.14), rgba(211,134,92,.04));
+    margin-bottom:clamp(18px,3vw,26px);
+  }
+  .alert svg{flex:0 0 auto;width:26px;height:26px;stroke:var(--clay);stroke-width:1.6;fill:none;margin-top:2px}
+  .alert h3{margin:0 0 6px;font-family:var(--serif);font-size:1.02rem;letter-spacing:.08em}
+  .alert p{margin:0;font-size:.9rem;color:var(--ink-2);line-height:1.85}
+  .alert strong{color:var(--ink);font-weight:600}
+
+  .table-wrap{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
+  table{width:100%;border-collapse:collapse;font-size:.9rem}
+  caption{
+    caption-side:top;
+    text-align:left;
+    padding:14px 20px 0;
+    font-size:.78rem;
+    letter-spacing:.14em;
+    color:var(--ink-3);
+  }
+  th,td{padding:13px 20px;text-align:left;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  th{
+    font-weight:600;
+    font-size:.78rem;
+    letter-spacing:.14em;
+    color:var(--ink-2);
+    background:var(--bg-soft);
+  }
+  tr:last-child td{border-bottom:0}
+  td .tel{font-family:var(--mono);font-size:.92rem;color:var(--ink);letter-spacing:.02em}
+  td small{display:block;font-size:.76rem;color:var(--ink-3);margin-top:2px;line-height:1.65}
+  .todo{
+    display:inline-block;
+    padding:.05em .5em;
+    border:1px dashed var(--clay);
+    border-radius:5px;
+    font-size:.76rem;
+    color:var(--clay);
+    letter-spacing:.06em;
+  }
+
+  /* ================= 树洞 ================= */
+  .hollow{
+    display:grid;
+    grid-template-columns:.92fr 1.08fr;
+    gap:clamp(16px,3vw,26px);
+  }
+  .hollow textarea{
+    width:100%;
+    min-height:132px;
+    padding:14px 16px;
+    border:1px solid var(--line);
+    border-radius:13px;
+    background:var(--card-solid);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:.92rem;
+    line-height:1.8;
+    resize:vertical;
+  }
+  .hollow textarea:focus{outline:none;border-color:var(--mint)}
+  .hollow-actions{display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap}
+  .counter{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);margin-left:auto}
+  .notes{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-height:420px;overflow-y:auto}
+  .notes li{
+    position:relative;
+    padding:14px 42px 14px 16px;
+    border:1px solid var(--line-soft);
+    border-left:3px solid var(--mint);
+    border-radius:10px;
+    background:var(--card-solid);
+    font-size:.9rem;
+    line-height:1.85;
+    word-break:break-word;
+  }
+  .notes .n-time{
+    display:block;
+    margin-top:7px;
+    font-family:var(--mono);
+    font-size:.72rem;
+    color:var(--ink-3);
+  }
+  .notes .del{
+    position:absolute;
+    right:8px;top:8px;
+    width:26px;height:26px;
+    display:grid;place-items:center;
+    border:0;
+    background:transparent;
+    color:var(--ink-3);
+    border-radius:6px;
+    cursor:pointer;
+    font-size:1rem;
+    line-height:1;
+    transition:color .2s, background .2s;
+  }
+  .notes .del:hover{color:var(--clay);background:rgba(211,134,92,.1)}
+
+  /* ================= 页脚 ================= */
+  .foot{
+    padding:clamp(36px,5vw,56px) 0 clamp(30px,4vw,44px);
+    border-top:1px solid var(--line);
+    display:grid;
+    gap:22px;
+  }
+  .foot-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+  .foot-sign{font-family:var(--serif);font-size:1.06rem;letter-spacing:.12em}
+  .foot-sign small{display:block;margin-top:6px;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--ink-3)}
+  .foot-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.88rem}
+  .foot-links a{text-decoration:none;color:var(--ink-2);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .2s,border-color .2s}
+  .foot-links a:hover{color:var(--clay);border-color:var(--clay)}
+  .disclaimer{
+    font-size:.76rem;
+    line-height:1.85;
+    color:var(--ink-3);
+    max-width:70ch;
+    padding-top:16px;
+    border-top:1px dashed var(--line-soft);
+  }
+
+  /* ================= 动效 ================= */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+    .reveal{opacity:1;transform:none}
+  }
+
+  /* ================= 响应式 ================= */
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;gap:34px}
+    .hero-visual{max-width:340px;margin:0 auto;width:100%}
+    .grid-3{grid-template-columns:repeat(2,1fr)}
+    .tools{grid-template-columns:1fr}
+    .hollow{grid-template-columns:1fr}
+    .myth-item{grid-template-columns:1fr}
+    .myth-item .m{border-right:0;border-bottom:1px solid var(--line)}
+  }
+  @media (max-width:620px){
+    body{font-size:15px}
+    .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+    .nav{gap:10px;padding:10px 14px}
+    .nav-links{gap:14px}
+    .nav-links a{font-size:.84rem}
+    .duty{padding-left:52px}
+    .moods{gap:6px}
+    .mood{padding:8px 2px;font-size:.7rem}
+    .mood svg{width:22px;height:22px}
+    th,td{padding:11px 14px}
+    caption{padding:12px 14px 0}
+  }
+
+  @media print{
+    .nav,.hero-visual,.theme-btn,.tools,.hollow-actions{display:none}
+    body{background:#fff;color:#000}
+    .sec{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top"><span class="dot"></span>心晴手册</a>
+  <nav class="nav-links" aria-label="页面导航">
+    <a href="#about">关于</a>
+    <a href="#work">工作</a>
+    <a href="#tools">工具</a>
+    <a href="#science">科普</a>
+    <a href="#help">求助</a>
+    <a href="#hollow">树洞</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" aria-label="切换深色模式" title="切换深色模式">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+      <circle cx="12" cy="12" r="4.2"></circle>
+      <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"></path>
+    </svg>
+  </button>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= 首屏 ================= -->
+  <section class="hero">
+    <div class="hero-main">
+      <p class="kicker">Class Mental Health Commissioner</p>
+      <h1>马振霖<span class="h1-sub">Mǎ Zhènlín</span></h1>
+      <p class="lead">我是班里的心理委员。<br>不负责给答案，负责陪你找到自己的答案。</p>
+      <p class="lead-en">I don't hand out answers — I stay with you until you find yours.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#tools">试试心晴工具</a>
+        <a class="btn btn-ghost" href="#help">我现在需要帮助</a>
+      </div>
+      <ul class="hero-meta">
+        <li>烟台理工学院</li>
+        <li>倾听 · 陪伴 · 转介</li>
+        <li>保密（有例外）</li>
+      </ul>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="ring ring-3"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-1"></div>
+      <div class="core">心安</div>
+      <span class="float-tag t1">在这里</span>
+      <span class="float-tag t2">慢慢来</span>
+      <span class="float-tag t3">不评判</span>
+    </div>
+  </section>
+
+  <!-- ================= 01 关于 ================= -->
+  <section class="sec reveal" id="about">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2>关于我</h2>
+      <span class="en">About</span>
+      <span class="rule"></span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>我是谁</h3>
+        <p>马振霖，烟台理工学院学生，班里的心理委员。日常写 Java、调接口，也留在教室里听人把话说完。</p>
+        <p>心理委员不是「会看穿人心的人」，更像班里的一盏小灯：不够亮，但一直开着。</p>
+      </div>
+      <div class="card">
+        <h3>我相信的三件事</h3>
+        <p><strong>情绪没有对错。</strong>难受不需要理由，也不需要先证明自己「值得被安慰」。</p>
+        <p><strong>被听见就有用。</strong>很多问题不是被解决的，是被说清楚之后自己松开的。</p>
+        <p><strong>边界是善意的一部分。</strong>该转介的时候不硬扛，才是真的负责。</p>
+      </div>
+    </div>
+    <div class="quote-block">
+      <blockquote>你不需要先变好，才配被好好对待。</blockquote>
+      <cite>—— 写在手册第一页的话</cite>
+    </div>
+  </section>
+
+  <!-- ================= 02 在做什么 ================= -->
+  <section class="sec reveal" id="work">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2>我在做什么</h2>
+      <span class="en">What I Do</span>
+      <span class="rule"></span>
+    </div>
+    <div class="grid-3">
+      <div class="card duty">
+        <span class="idx">01</span>
+        <h3>倾听，不评判</h3>
+        <p>你说的话先被接住，再被理解。不急着分析，也不急着劝「想开点」。</p>
+      </div>
+      <div class="card duty">
+        <span class="idx">02</span>
+        <h3>把科普讲清楚</h3>
+        <p>把「心理问题就是矫情」这类误解，一条一条拆掉，换成能听懂的说法。</p>
+      </div>
+      <div class="card duty">
+        <span class="idx">03</span>
+        <h3>组织班级活动</h3>
+        <p>心理主题班会、放松练习、观影讨论——让「聊心理」变成一件不尴尬的日常事。</p>
+      </div>
+      <div class="card duty">
+        <span class="idx">04</span>
+        <h3>识别与转介</h3>
+        <p>持续低落、长期失眠、出现自伤念头，这类信号不自己扛，第一时间联系辅导员或心理中心。</p>
+      </div>
+      <div class="card duty">
+        <span class="idx">05</span>
+        <h3>守住边界</h3>
+        <p>我不是心理咨询师。不做诊断、不开「处方」、不私下「治疗」，也不替任何人做决定。</p>
+      </div>
+      <div class="card duty">
+        <span class="idx">06</span>
+        <h3>照顾自己</h3>
+        <p>助人的人也会累。先稳住自己，才能稳稳地接住别人；累了就说累，这不叫不负责。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 03 工具 ================= -->
+  <section class="sec reveal" id="tools">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2>心晴工具</h2>
+      <span class="en">Toolkit</span>
+      <span class="rule"></span>
+    </div>
+
+    <div class="tools">
+
+      <!-- 情绪天气 -->
+      <div class="card tool">
+        <div class="tool-head">
+          <h3>今天的情绪天气</h3>
+          <span class="hint">本地记录 · 不上传</span>
+        </div>
+        <p>给此刻的心情选一个天气，坚持记几天，你会看见自己的节奏。</p>
+        <div class="moods" role="group" aria-label="选择情绪天气">
+          <button class="mood" type="button" data-mood="晴" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4"></path></svg>
+            晴
+          </button>
+          <button class="mood" type="button" data-mood="多云" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3.2"></circle><path d="M9 2.6v1.6M4.6 4.6l1.1 1.1M2.6 9h1.6"></path><path d="M8.5 19h9a3.5 3.5 0 0 0 .2-7 5 5 0 0 0-9.4-1"></path></svg>
+            多云
+          </button>
+          <button class="mood" type="button" data-mood="阴" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><path d="M7 17h8.5a3.5 3.5 0 0 0 .2-7 5 5 0 0 0-9.5-1A3.7 3.7 0 0 0 7 17z"></path><path d="M5 20.5h11"></path></svg>
+            阴
+          </button>
+          <button class="mood" type="button" data-mood="雨" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><path d="M7 14h9a3.5 3.5 0 0 0 .2-7 5 5 0 0 0-9.5-1A3.7 3.7 0 0 0 7 14z"></path><path d="M8.5 17.5l-1 3M12 17.5l-1 3M15.5 17.5l-1 3"></path></svg>
+            雨
+          </button>
+          <button class="mood" type="button" data-mood="雷" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><path d="M7 14h9a3.5 3.5 0 0 0 .2-7 5 5 0 0 0-9.5-1A3.7 3.7 0 0 0 7 14z"></path><path d="M13 15l-2.2 3.4h2.6L11.6 22"></path></svg>
+            雷
+          </button>
+        </div>
+        <div class="mood-row">
+          <input id="moodNote" type="text" maxlength="40" placeholder="想说的话，一句就够（可不填）" aria-label="心情备注">
+          <button class="mini-btn" id="moodSave" type="button">记下</button>
+        </div>
+        <div class="bars" id="moodBars" aria-hidden="true"></div>
+        <ul class="timeline" id="moodList"></ul>
+        <p class="tool-note">记录只保存在你当前这台设备的浏览器里（localStorage），换设备或清缓存就没了，也没有任何人能看到。</p>
+      </div>
+
+      <!-- 呼吸练习 -->
+      <div class="card tool">
+        <div class="tool-head">
+          <h3>4-7-8 呼吸</h3>
+          <span class="hint">约 1 分钟</span>
+        </div>
+        <p>吸气 4 秒、屏息 7 秒、呼气 8 秒。呼气比吸气长，副交感神经会接管，心跳慢下来。</p>
+        <div class="breath-stage">
+          <div class="breath-halo" id="halo"></div>
+          <div class="breath-circle" id="bcircle">
+            <span id="bLabel">开始</span>
+            <span class="cnt" id="bCount"></span>
+          </div>
+        </div>
+        <div class="breath-ctrl">
+          <button class="mini-btn" id="breathBtn" type="button">开始练习</button>
+          <button class="mini-btn ghost" id="breathReset" type="button">重置</button>
+        </div>
+        <p class="tool-note">如果屏息 7 秒让你不舒服，改成 4-4-6 也有效。胸闷、头晕就立刻停下，正常呼吸。</p>
+      </div>
+
+      <!-- 情绪自查 -->
+      <div class="card tool" style="grid-column:1/-1">
+        <div class="tool-head">
+          <h3>两周情绪小自查</h3>
+          <span class="hint">5 题 · 非诊断</span>
+        </div>
+        <p>回想最近两周的真实状态，每题选一个最接近的答案。它只是一个提醒，不是结论。</p>
+        <div class="quiz" id="quiz"></div>
+        <div class="quiz-result" id="quizResult" role="status"></div>
+        <p class="tool-note">本自查改编自常见情绪筛查的表述方式，<strong>不构成任何诊断，也不能替代专业评估</strong>。分数高不代表你有病，分数低也不代表没问题——你对自己的感受最有发言权。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 04 科普 ================= -->
+  <section class="sec reveal" id="science">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2>心理科普</h2>
+      <span class="en">Psychology</span>
+      <span class="rule"></span>
+    </div>
+
+    <div class="myth">
+      <div class="myth-item">
+        <div class="m">
+          <span class="tag">误解</span>
+          <p>心理出问题，就是「想太多」「太脆弱」。</p>
+        </div>
+        <div class="f">
+          <span class="tag">事实</span>
+          <p>情绪困扰有生理、认知、环境多重成因，和感冒发烧一样需要被认真对待。说一个人「想太多」，等于让发烧的人「别烧了」。</p>
+        </div>
+      </div>
+      <div class="myth-item">
+        <div class="m">
+          <span class="tag">误解</span>
+          <p>去做心理咨询，说明我「有病」。</p>
+        </div>
+        <div class="f">
+          <span class="tag">事实</span>
+          <p>咨询更像一次有结构的谈话：有人帮你把混乱的线头理开。很多人去咨询，只是想在重要选择前更了解自己。</p>
+        </div>
+      </div>
+      <div class="myth-item">
+        <div class="m">
+          <span class="tag">误解</span>
+          <p>跟别人倾诉，是把负能量甩给对方。</p>
+        </div>
+        <div class="f">
+          <span class="tag">事实</span>
+          <p>被听见本身就有疗愈作用。愿意开口是勇气，不是负担；而听的人也可以诚实地说「我现在接不住这么多」。</p>
+        </div>
+      </div>
+      <div class="myth-item">
+        <div class="m">
+          <span class="tag">误解</span>
+          <p>心理委员能「治好」我。</p>
+        </div>
+        <div class="f">
+          <span class="tag">事实</span>
+          <p>心理委员做的是第一道陪伴与转介。评估、诊断、干预属于专业咨询师与医生的工作，这条线不该被模糊。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:clamp(38px,6vw,64px);margin-bottom:22px">
+      <span class="num">4.1</span>
+      <h2 style="font-size:1.12rem">六个能用上的心理效应</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="grid-3">
+      <div class="card effect">
+        <span class="no">No.01</span>
+        <h3>聚光灯效应</h3>
+        <p>你以为所有人都在盯着你出的丑，其实大家忙着担心自己。</p>
+        <p class="memo">下次脸红的时候，试着把注意力放到对方眼睛里，而不是自己身上。</p>
+      </div>
+      <div class="card effect">
+        <span class="no">No.02</span>
+        <h3>蔡格尼克效应</h3>
+        <p>没做完的事最占脑子，会反复冒出来提醒你。</p>
+        <p class="memo">睡前把待办写在纸上，写下来，脑子就允许自己先放下。</p>
+      </div>
+      <div class="card effect">
+        <span class="no">No.03</span>
+        <h3>罗森塔尔效应</h3>
+        <p>被真诚期待的人，真的会表现得更好。</p>
+        <p class="memo">对自己也适用：把「我肯定不行」换成「我还没找到方法」。</p>
+      </div>
+      <div class="card effect">
+        <span class="no">No.04</span>
+        <h3>巴纳姆效应</h3>
+        <p>越笼统的描述，越容易让人觉得「这说的就是我」。</p>
+        <p class="memo">所以别用星座和网络测试给自己下诊断，那只是好听的模糊话。</p>
+      </div>
+      <div class="card effect">
+        <span class="no">No.05</span>
+        <h3>旁观者效应</h3>
+        <p>在场的人越多，每个人越觉得「应该别人会管」。</p>
+        <p class="memo">求助要具体：穿蓝外套的同学，麻烦帮我打个电话。</p>
+      </div>
+      <div class="card effect">
+        <span class="no">No.06</span>
+        <h3>登门槛效应</h3>
+        <p>先答应一个小请求，就更可能继续做下去。</p>
+        <p class="memo">不想学习时，只要求自己「翻开书读 5 分钟」，通常就停不下来了。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 求助 ================= -->
+  <section class="sec reveal" id="help">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2>求助资源</h2>
+      <span class="en">Get Help</span>
+      <span class="rule"></span>
+    </div>
+
+    <div class="alert">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2 21 19.2H3L12 3.2z"></path><path d="M12 9.4v4.4"></path><circle cx="12" cy="16.6" r=".9" fill="currentColor" stroke="none"></circle></svg>
+      <div>
+        <h3>如果你现在很难受，请先看这一段</h3>
+        <p>出现<strong>伤害自己的念头</strong>，或已经做了危险的事，请立刻联系身边信任的人、辅导员、校医院，或拨打 <strong>12356</strong>（全国心理援助热线，24 小时）。不要一个人在宿舍里熬，也不要在深夜做任何决定。</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption>校园与公共心理支持渠道</caption>
+        <thead>
+          <tr>
+            <th style="width:34%">渠道</th>
+            <th style="width:26%">联系方式</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>学校心理健康教育中心</td>
+            <td><span class="todo">待填写：预约电话 / 地点 / 时间</span></td>
+            <td>免费、保密，本校学生优先。<small>每所学校的预约方式不同，通常可通过辅导员、学工系统或中心公众号预约。</small></td>
+          </tr>
+          <tr>
+            <td>全国心理援助热线</td>
+            <td><span class="tel">12356</span></td>
+            <td>国家卫健委开通的全国统一热线，24 小时接听，免费。<small>情绪崩溃、失眠、强烈焦虑时都可以打。</small></td>
+          </tr>
+          <tr>
+            <td>北京心理危机研究与干预中心</td>
+            <td><span class="tel">010-82951332</span></td>
+            <td>24 小时危机干预热线，面向全国。<small>适合紧急、危机状态下的通话支持。</small></td>
+          </tr>
+          <tr>
+            <td>希望 24 热线</td>
+            <td><span class="tel">400-161-9995</span></td>
+            <td>按 1 转学生专线，按 2 转抑郁专线。<small>由志愿者与专业人员提供陪伴式倾听。</small></td>
+          </tr>
+          <tr>
+            <td>身边最近的人</td>
+            <td>辅导员 · 班主任 · 室友 · 家人</td>
+            <td>最容易被低估的资源。<small>发一句「我最近状态不太好」，就已经是求助。</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="tool-note" style="margin-top:14px">以上热线信息可能随机构调整而变化，拨打前建议再核对一次官方公告。<strong>表中的学校信息为占位，请替换成本校真实数据后再发布。</strong></p>
+  </section>
+
+  <!-- ================= 06 树洞 ================= -->
+  <section class="sec reveal" id="hollow">
+    <div class="sec-head">
+      <span class="num">06</span>
+      <h2>树洞</h2>
+      <span class="en">Hollow</span>
+      <span class="rule"></span>
+    </div>
+    <div class="hollow">
+      <div class="card">
+        <h3>说点什么吧</h3>
+        <p>写完不用给任何人看。很多时候，把话变成字，情绪就已经退了一半。</p>
+        <div style="margin-top:14px">
+          <textarea id="noteInput" maxlength="300" placeholder="今天有一件事，我一直没跟人说过……" aria-label="树洞留言"></textarea>
+        </div>
+        <div class="hollow-actions">
+          <button class="mini-btn" id="noteSave" type="button">放进树洞</button>
+          <button class="mini-btn ghost" id="noteClear" type="button">清空全部</button>
+          <span class="counter" id="noteCount">0 / 300</span>
+        </div>
+        <p class="tool-note">这些字只写进你本机浏览器的存储里，不会上传、不会被我看到。想彻底删掉，点右上角的叉，或清空全部。</p>
+      </div>
+      <div class="card">
+        <h3>树洞里的回声</h3>
+        <ul class="notes" id="noteList"></ul>
+        <p class="empty" id="noteEmpty">还什么都没有。第一条可以留给今天的自己。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <div class="foot-top">
+    <div class="foot-sign">
+      马振霖 · 班级心理委员
+      <small>Ma Zhenlin · Class Mental Health Commissioner</small>
+    </div>
+    <div class="foot-links">
+      <!-- 改成你自己的 GitHub 主页与邮箱 -->
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:your@email.com">写邮件</a>
+      <a href="#top">回到顶部</a>
+    </div>
+  </div>
+  <p class="disclaimer">
+    本站内容用于心理健康科普与自我觉察，<strong>不构成医疗或心理诊断建议</strong>。页面中的记录功能仅在本机浏览器运行，不收集、不上传任何个人信息。
+    如果你或身边的人正处于危机状态，请优先联系专业人员或拨打 12356。心理委员不是心理咨询师，本站也不替代学校心理健康教育中心的服务。
+  </p>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- 存储封装（file:// 或隐私模式下也不会崩） ---------- */
+  var store = {
+    get: function(k, d){
+      try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }
+      catch(e){ return d; }
+    },
+    set: function(k, v){
+      try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){}
+    }
+  };
+
+  /* ---------- 主题 ---------- */
+  var themeBtn = document.getElementById('themeBtn');
+  var savedTheme = store.get('xq_theme', null);
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  themeBtn.addEventListener('click', function(){
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    store.set('xq_theme', next);
+  });
+
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  function fmt(ts){
+    var d = new Date(ts);
+    return pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+  }
+
+  /* ---------- 情绪天气 ---------- */
+  var MOODS = ['晴', '多云', '阴', '雨', '雷'];
+  var moodSel = null;
+  var moodBtns = [].slice.call(document.querySelectorAll('.mood'));
+  moodBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      moodSel = b.getAttribute('data-mood');
+      moodBtns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    });
+  });
+
+  function renderMood(){
+    var recs = store.get('xq_mood_records', []);
+    var list = document.getElementById('moodList');
+    list.innerHTML = '';
+    if (!recs.length) {
+      var e = document.createElement('li');
+      e.className = 'empty';
+      e.textContent = '还没有记录。今天先选一个天气试试。';
+      list.appendChild(e);
+    } else {
+      recs.slice(0, 7).forEach(function(r){
+        var li = document.createElement('li');
+        var t = document.createElement('span'); t.className = 't-time'; t.textContent = fmt(r.t);
+        var n = document.createElement('span'); n.className = 't-name'; n.textContent = r.m;
+        var note = document.createElement('span'); note.className = 't-note'; note.textContent = r.n || '';
+        li.appendChild(t); li.appendChild(n); li.appendChild(note);
+        list.appendChild(li);
+      });
+    }
+    var bars = document.getElementById('moodBars');
+    bars.innerHTML = '';
+    var total = recs.length;
+    MOODS.forEach(function(m){
+      var c = recs.filter(function(r){ return r.m === m; }).length;
+      var row = document.createElement('div'); row.className = 'bar-row';
+      var lb = document.createElement('span'); lb.textContent = m;
+      var tr = document.createElement('span'); tr.className = 'bar-track';
+      var fl = document.createElement('span'); fl.className = 'bar-fill';
+      fl.style.width = (total ? Math.round(c / total * 100) : 0) + '%';
+      tr.appendChild(fl);
+      var num = document.createElement('span'); num.textContent = c;
+      row.appendChild(lb); row.appendChild(tr); row.appendChild(num);
+      bars.appendChild(row);
+    });
+  }
+
+  var moodSave = document.getElementById('moodSave');
+  moodSave.addEventListener('click', function(){
+    if (!moodSel) {
+      var old = moodSave.textContent;
+      moodSave.textContent = '先选一个天气';
+      moodSave.disabled = true;
+      setTimeout(function(){ moodSave.textContent = old; moodSave.disabled = false; }, 1400);
+      return;
+    }
+    var note = document.getElementById('moodNote');
+    var recs = store.get('xq_mood_records', []);
+    recs.unshift({ t: Date.now(), m: moodSel, n: (note.value || '').trim() });
+    if (recs.length > 60) recs = recs.slice(0, 60);
+    store.set('xq_mood_records', recs);
+    note.value = '';
+    renderMood();
+  });
+
+  /* ---------- 4-7-8 呼吸 ---------- */
+  var circle = document.getElementById('bcircle');
+  var halo = document.getElementById('halo');
+  var bLabel = document.getElementById('bLabel');
+  var bCount = document.getElementById('bCount');
+  var bBtn = document.getElementById('breathBtn');
+  var PHASES = [
+    { l: '吸气', s: 4, sc: 1.42, d: 4000 },
+    { l: '屏息', s: 7, sc: 1.42, d: 600 },
+    { l: '呼气', s: 8, sc: 0.82, d: 8000 }
+  ];
+  var timer = null, pidx = 0, remain = 0, running = false;
+
+  function applyPhase(){
+    var p = PHASES[pidx];
+    bLabel.textContent = p.l;
+    remain = p.s;
+    bCount.textContent = remain + 's';
+    circle.style.transitionDuration = p.d + 'ms';
+    halo.style.transitionDuration = p.d + 'ms';
+    circle.style.transform = 'scale(' + p.sc + ')';
+    halo.style.transform = 'scale(' + p.sc + ')';
+  }
+  function stepTick(){
+    remain--;
+    if (remain <= 0) {
+      pidx = (pidx + 1) % PHASES.length;
+      applyPhase();
+    } else {
+      bCount.textContent = remain + 's';
+    }
+  }
+  function startBreath(){
+    running = true;
+    bBtn.textContent = '停下';
+    pidx = 0;
+    applyPhase();
+    timer = setInterval(stepTick, 1000);
+  }
+  function stopBreath(){
+    running = false;
+    bBtn.textContent = '开始练习';
+    if (timer) { clearInterval(timer); timer = null; }
+    circle.style.transitionDuration = '900ms';
+    halo.style.transitionDuration = '900ms';
+    circle.style.transform = 'scale(1)';
+    halo.style.transform = 'scale(1)';
+    bLabel.textContent = '开始';
+    bCount.textContent = '';
+  }
+  bBtn.addEventListener('click', function(){ running ? stopBreath() : startBreath(); });
+  document.getElementById('breathReset').addEventListener('click', stopBreath);
+
+  /* ---------- 两周情绪自查 ---------- */
+  var QS = [
+    '我提不起劲做平时喜欢的事',
+    '我入睡困难，或睡了以后仍然觉得累',
+    '我容易被小事激怒，或莫名想哭',
+    '担心的事在脑子里转个不停，停不下来',
+    '我觉得身边的人理解不了我，说了也没用'
+  ];
+  var OPT = ['几乎没有', '有几天', '一半以上', '几乎每天'];
+  var ans = [];
+  for (var i = 0; i < QS.length; i++) ans.push(-1);
+
+  var quiz = document.getElementById('quiz');
+  QS.forEach(function(q, idx){
+    var box = document.createElement('div'); box.className = 'q';
+    var t = document.createElement('div'); t.className = 'q-t';
+    var no = document.createElement('span'); no.textContent = 'Q' + (idx + 1);
+    t.appendChild(no);
+    t.appendChild(document.createTextNode(q));
+    var opts = document.createElement('div'); opts.className = 'opts';
+    OPT.forEach(function(o, j){
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'opt';
+      btn.textContent = o;
+      btn.setAttribute('aria-pressed', 'false');
+      btn.addEventListener('click', function(){
+        ans[idx] = j;
+        [].slice.call(opts.children).forEach(function(x){ x.setAttribute('aria-pressed', x === btn ? 'true' : 'false'); });
+        calcQuiz();
+      });
+      opts.appendChild(btn);
+    });
+    box.appendChild(t); box.appendChild(opts);
+    quiz.appendChild(box);
+  });
+
+  function calcQuiz(){
+    if (ans.indexOf(-1) > -1) return;
+    var total = ans.reduce(function(a, b){ return a + b; }, 0);
+    var html = '';
+    if (total <= 4) {
+      html = '<strong>0–4 分 · 状态还算稳</strong><br>最近两周你大体顶得住。继续守住睡眠和运动这两条底线，也留意那些偶尔冒出来的低落——它们值得被记下来。';
+    } else if (total <= 9) {
+      html = '<strong>5–9 分 · 有些疲惫了</strong><br>这不是意志力不够，更像电量偏低。找个人把最近的事说一遍，把作息调回来，通常就会有变化。如果这种状态持续两周以上，去学校心理健康教育中心聊聊，比继续硬撑划算。';
+    } else {
+      html = '<strong>10–15 分 · 建议尽快找人说说话</strong><br>请把这份感受告诉辅导员、家人，或心理健康教育中心的老师；也可以直接拨打 <strong>12356</strong>。你不需要一个人扛完，去求助不是认输，是把专业的人放进你的队伍里。';
+    }
+    html += '<br><span style="color:var(--ink-3);font-size:.8rem">分数只是一个提醒，不是标签。真正算数的是你自己的感受。</span>';
+    var box = document.getElementById('quizResult');
+    box.innerHTML = html;
+    box.classList.add('show');
+  }
+
+  /* ---------- 树洞 ---------- */
+  var noteInput = document.getElementById('noteInput');
+  var noteCount = document.getElementById('noteCount');
+  var noteList = document.getElementById('noteList');
+  var noteEmpty = document.getElementById('noteEmpty');
+
+  noteInput.addEventListener('input', function(){
+    noteCount.textContent = noteInput.value.length + ' / 300';
+  });
+
+  function renderNotes(){
+    var arr = store.get('xq_notes', []);
+    noteList.innerHTML = '';
+    noteEmpty.style.display = arr.length ? 'none' : 'block';
+    arr.forEach(function(n){
+      var li = document.createElement('li');
+      li.appendChild(document.createTextNode(n.x));
+      var tm = document.createElement('span'); tm.className = 'n-time'; tm.textContent = fmt(n.t);
+      li.appendChild(tm);
+      var del = document.createElement('button');
+      del.type = 'button';
+      del.className = 'del';
+      del.textContent = '\u00d7';
+      del.setAttribute('aria-label', '删除这条');
+      del.addEventListener('click', function(){
+        var rest = store.get('xq_notes', []).filter(function(z){ return z.id !== n.id; });
+        store.set('xq_notes', rest);
+        renderNotes();
+      });
+      li.appendChild(del);
+      noteList.appendChild(li);
+    });
+  }
+
+  document.getElementById('noteSave').addEventListener('click', function(){
+    var v = noteInput.value.trim();
+    if (!v) { noteInput.focus(); return; }
+    var arr = store.get('xq_notes', []);
+    arr.unshift({
+      id: Date.now() + '-' + Math.random().toString(36).slice(2, 7),
+      x: v,
+      t: Date.now()
+    });
+    store.set('xq_notes', arr);
+    noteInput.value = '';
+    noteCount.textContent = '0 / 300';
+    renderNotes();
+  });
+
+  document.getElementById('noteClear').addEventListener('click', function(){
+    if (!store.get('xq_notes', []).length) return;
+    if (window.confirm('确定清空树洞里的全部内容？这个操作不能撤销。')) {
+      store.set('xq_notes', []);
+      renderNotes();
+    }
+  });
+
+  /* ---------- 导航高亮 ---------- */
+  var links = [].slice.call(document.querySelectorAll('.nav-links a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); })
+                      .filter(function(x){ return !!x; });
+  if ('IntersectionObserver' in window) {
+    var navIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          links.forEach(function(a){
+            a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function(s){ navIO.observe(s); });
+  }
+
+  /* ---------- 滚动出现 ---------- */
+  var reveals = [].slice.call(document.querySelectorAll('.reveal'));
+  if ('IntersectionObserver' in window) {
+    var revIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          revIO.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(function(el){ revIO.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- 初始化 ---------- */
+  renderMood();
+  renderNotes();
+})();
+</script>
+
+</body>
+</html>
